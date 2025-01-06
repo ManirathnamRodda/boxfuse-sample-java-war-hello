@@ -1,4 +1,4 @@
-boxfuse-sample-java-war-hello.TEST CHANGES ME polls
+boxfuse-sample-java-war-hello.TEST CHANGES ME poll
 =============================
 
 Boxfuse Sample Hello World Java application packaged as a war file
