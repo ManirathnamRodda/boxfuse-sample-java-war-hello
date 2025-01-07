@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Jenkins Cloud DevOps </title>
+    <title>Jenkins Cloud DevOps and Practice</title>
     <style>
         body {
             text-align: center;
