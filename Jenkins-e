@@ -4,7 +4,7 @@ pipeline {
       stages{
             stage("GIT checkout"){
             steps{
-                 git 'https://github.com/emergencydevops-collab/boxfuse-sample-java-war-hello.git'
+                 git 'https://github.com/ManirathnamRodda/boxfuse-sample-java-war-hello.git'
               }
             }
             stage("build"){
@@ -18,13 +18,13 @@ pipeline {
                   steps{
                      
                        
-                       sshagent(['TOMCAT']) { 
+                       sshagent(['aef0563f-3a60-40b1-bf0d-a3b7af464a4e']) { 
                        
                        sh """
-                            scp -o StrictHostKeyChecking=no  target/boxfuse-sample-java-war-hello.war ubuntu@13.201.62.55:/home/ubuntu/apache-tomcat-9.0.91/webapps
+                            scp -o StrictHostKeyChecking=no  target/boxfuse-sample-java-war-hello.war ubuntu@13.234.66.174:8080:/home/ubuntu/apache-tomcat-9.0.98/webapps
                             
-                            ssh ubuntu@13.201.62.55 "sudo /home/ubuntu/apache-tomcat-9.0.91/bin/shutdown.sh"
-                            ssh ubuntu@13.201.62.55 "sudo /home/ubuntu/apache-tomcat-9.0.91/bin/startup.sh"
+                            ssh ubuntu@13.234.66.174:8080 "sudo /home/ubuntu/apache-tomcat-9.0.98/bin/shutdown.sh"
+                            ssh ubuntu@13.234.66.174:8080 "sudo /home/ubuntu/apache-tomcat-9.0.98/bin/startup.sh"
                             
                           """
     
