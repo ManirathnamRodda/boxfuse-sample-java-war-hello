@@ -21,10 +21,10 @@ pipeline {
                        sshagent(['aef0563f-3a60-40b1-bf0d-a3b7af464a4e']) { 
                        
                        sh """
-                            scp -o StrictHostKeyChecking=no  target/boxfuse-sample-java-war-hello.war ubuntu@13.234.66.174:8080:/home/ubuntu/apache-tomcat-9.0.98/webapps
+                            scp -o StrictHostKeyChecking=no  target/boxfuse-sample-java-war-hello.war ubuntu@13.234.66.174:/home/ubuntu/apache-tomcat-9.0.98/webapps
                             
-                            ssh ubuntu@13.234.66.174:8080 "sudo /home/ubuntu/apache-tomcat-9.0.98/bin/shutdown.sh"
-                            ssh ubuntu@13.234.66.174:8080 "sudo /home/ubuntu/apache-tomcat-9.0.98/bin/startup.sh"
+                            ssh ubuntu@13.234.66.174 "sudo /home/ubuntu/apache-tomcat-9.0.98/bin/shutdown.sh"
+                            ssh ubuntu@13.234.66.174 "sudo /home/ubuntu/apache-tomcat-9.0.98/bin/startup.sh"
                             
                           """
     
